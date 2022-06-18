@@ -1,0 +1,2179 @@
+body, html {
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5));
+    font-size: 100%;
+}
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+p, a {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Generic styles */
+html {
+  scroll-behavior: smooth;
+}
+
+.buttons{
+  background-color: darkgrey;
+  text-decoration: none;
+  color: white;
+  border-radius: .25rem;
+  text-align: middle;
+  display: inline-block;
+  transition: all .3s;
+  float:left;
+
+
+}
+
+
+
+.hero > * {
+  color: white;
+}
+
+.hero > h1 {
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+
+.hero > article > p {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.hero > article > a {
+  padding: 1rem;
+  margin-top: .75rem;
+}
+
+/* breweries styles */
+.breweries {
+  padding-top: 10%;
+  left: 0;
+  vertical-align: center;
+
+}
+
+.breweries > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+}
+
+.breweries > ul > li {
+  border: 1px solid #E2E2E2;
+  border-radius: .5rem;
+}
+
+.breweries > ul > li > figure {
+  max-height: 350px;
+  overflow: hidden;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  position: relative;
+}
+
+.breweries > ul > li > figure > img {
+  width: 100%;
+  object-fit: fill;
+  text-align: center;
+}
+
+.breweries > ul > li > figure > figcaption {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0,0,0,.7);
+  width: 100%;
+  height: 20%;
+}
+
+.breweries > ul > li > figure > figcaption > h3 {
+  color: white;
+  padding: .5rem;
+  font-size: 1.25rem;
+}
+
+.breweries > ul > li > p {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1rem .75rem;
+  color: white;
+}
+
+.breweries > ul > li > a {
+
+  padding: .5rem 1rem;
+
+  margin-top: 1rem;
+
+}
+
+ #um{
+
+  padding: .5rem 1rem;
+
+  margin-top: 4.1rem;
+
+}
+
+#tres{
+  padding: .5rem 1rem;
+
+  margin-top: 6.9rem;
+
+}
+
+#quatro{
+  padding: .5rem 1rem;
+
+  margin-top: 7rem;
+
+}
+
+
+
+
+
+
+
+a {
+  font-weight: bold;
+  font-family:courier,arial,helvetica;
+  color: darkgrey;
+  text-align: center;
+  margin: 10px 20px;
+  font-size: 18px;
+}
+
+/* header */
+
+.header {
+  background-color: none;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: none;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+
+
+
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: darkgrey;
+  border-radius: 10px;
+  color: white;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 10px;
+  text-decoration: none;
+  max-width: 100%; height: auto;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: darkgrey;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: darkgrey;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 285px;
+  background: black;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 60em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+
+
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: absolute;
+  top: 2%;
+  right: 0;
+  vertical-align: center;
+  bottom: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  z-index: 2;
+}
+
+.about{
+  padding-left: 1%;
+  margin-top: 10%;
+  width: 100%;
+  height: 1000px;
+  background-color: white;
+}
+.about p{
+  padding-top: 2%;
+  width: 99%;
+  text-align: center;
+  font-size: 30px;
+  vertical-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.left{
+  width: 50%;
+  float: left;
+}
+
+.sig {
+  padding-left: 45%;
+
+}
+
+.about h1{
+  text-align: center;
+  padding-top: 20px;
+  font-size: 50px;
+}
+
+.about .foto{
+float: right;
+object-fit: fill;
+
+}
+
+.under_img{
+  width: 10%;
+  padding-left: 5%;
+}
+
+.about p{
+
+}
+
+.sig{
+  vertical-align: middle;
+}
+
+
+
+
+.about_box {
+overflow: hidden;
+position: absolute;
+top:65%;
+width: 100%;
+height: 25%;
+display: block;
+text-align: center;
+background-color: white;
+
+}
+
+
+
+
+.imagem {
+  float: right;
+  width: 50%;
+  background: white;
+  bottom: 10%;
+}
+
+
+
+
+
+.container{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(0,0,0,1));
+    z-index: 3;
+}
+
+
+
+.content{
+    width: 100%;
+    height: 100%;
+    position:relative;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    background-color: black;
+
+}
+
+section{
+    position: relative;
+    top: 10%;
+	  margin: 0;
+    padding: 0;
+    background: none;
+    width: 100%;
+    height: 100vh;
+    clear: both;
+}
+
+section.sec2{
+	width: 100%;
+  height: 300%;
+	background: black;
+  margin: 0;
+  top: 8%;
+  display: block;
+}
+
+
+
+
+
+
+
+.content title{
+    font-size: 70px;
+    font-family:courier,arial,helvetica;;
+    text-align: center;
+    padding-top:50px;
+    color: white;
+    display: block;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
+}
+
+.content p{
+    font-family:courier,arial,helvetica;
+}
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
+
+
+.footer_box {
+
+  width: 100%
+  bottom: 0;
+  height: 30%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+
+  position: relative;
+  clear: both;
+}
+
+footer{
+    background-color: darkgrey;
+    position: absolute;
+    width: 100%;
+    top:0;
+    height:100%;
+
+}
+
+footer p{
+  font-size: 8px;
+  bottom: 0;
+}
+
+
+footer img {
+  float: left;
+  background-color: none;
+  margin-left: 1.5%;
+  margin-top: 5%;
+
+}
+
+footer .contactos {
+width: 25%;
+background-color: none;
+vertical-align: center;
+position: absolute;
+padding-left: 14%;
+padding-top: 0;
+color: white;
+text-align: center;
+
+}
+
+footer .contactos #email{
+margin-bottom: 0;
+width: 100%;
+position: relative;
+padding-left: 0;
+margin-top: 1%;
+font-size: 13px;
+}
+
+footer .contactos #tlmvl{
+padding-top: 4%;
+width: 100%;
+position: relative;
+padding-left: 0;
+font-size: 13px;
+}
+
+
+
+
+footer .footer_text{
+    float: left;
+    color: white;
+    bottom: 0;
+    
+   
+
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 320px) {
+    /* For tablets: */
+
+  }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 321px) {
+  .about{
+    padding-left: 1%;
+    margin-top: 10%;
+    width: 100%;
+    height: 400px;
+    background-color: white;
+  }
+
+
+  .about p{
+
+    padding-top: 5%;
+    width: 95%;
+    text-align: center;
+    font-size: 11px;
+    vertical-align: center;
+    padding-left: 10%;
+  }
+
+  .left{
+    width: 40%;
+    float: left;
+  }
+
+  .sig {
+    padding-left: 45%;
+
+  }
+
+  .about h1{
+    text-align: center;
+    padding-top: 0px;
+    font-size: 13px;
+    padding-left: 11%;
+  }
+
+  .about .foto{
+  float: right;
+  width: 50%;
+  object-fit: fill;
+  height: 100%;
+
+  }
+
+  .under_img{
+
+    display: none;
+
+  }
+
+  .sig{
+    display: none;
+
+  }
+
+
+  .footer_box {
+
+    width: 100%
+    bottom: 0;
+    height: 25%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: darkgrey;
+    position: relative;
+    clear: both;
+  }
+
+  footer{
+
+      position: absolute;
+      width: 100%;
+      top:0;
+      height:100%;
+
+
+  }
+
+  footer h1{
+    font-size: 18px;
+  }
+
+
+  footer p{
+    font-size: 10px;
+    bottom: 0;
+    text-align:center;
+    margin-left:10%;
+   
+  }
+
+
+  footer img {
+    float: left;
+    background-color: none;
+    display: none;
+  }
+
+  footer .contactos {
+  width: 20%;
+  background-color: none;
+  position: absolute;
+  top: 0;
+  color: white;
+  }
+
+  footer .contactos #email{
+  margin-bottom: 0;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  font-size: 10px;
+  }
+
+  footer .contactos #tlmvl{
+  
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  font-size: 10px;
+  }
+
+
+  footer .footer_text{
+      position:absolute;
+      color: white;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      bottom: 0;
+      text-align: center;
+  }
+
+  section.sec2{
+    width: 100%;
+    height: 600%;
+    background: black;
+    margin: 0;
+    top: 8%;
+    display: block;
+  }
+
+.breweries{
+  left: -1%;
+
+
+}
+
+.breweries ul{
+  left: -10%;
+  margin-left: 4px;
+  padding-left: 1%;
+}
+
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+.breweries{
+  left: -1%;
+ 
+}
+
+
+  .about{
+    padding-left: 1%;
+    margin-top: 10%;
+    width: 100%;
+    height: 600px;
+    background-color: white;
+  }
+
+
+  .about p{
+
+    padding-top: 10%;
+    width: 95%;
+    text-align: center;
+    font-size: 17px;
+    vertical-align: center;
+    padding-left: 10%;
+  }
+
+  .left{
+    width: 40%;
+    float: left;
+  }
+
+  .sig {
+    padding-left: 45%;
+
+  }
+
+  .about h1{
+    text-align: center;
+    padding-top: 0px;
+    font-size: 24px;
+    padding-left: 11%;
+  }
+
+  .about .foto{
+  float: right;
+  width: 50%;
+  object-fit: fill;
+  height: 100%;
+
+  }
+
+  .under_img{
+
+    display: none;
+
+  }
+
+  .sig{
+    display: none;
+
+  }
+
+
+  .footer_box {
+
+    width: 100%
+    bottom: 0;
+    height: 30%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: darkgrey;
+    position: relative;
+    clear: both;
+  }
+
+  footer{
+
+      position: absolute;
+      width: 100%;
+      bottom:0;
+
+  }
+
+
+  footer h1{
+    font-size: 24px;
+  }
+
+
+  footer p{
+    font-size: 13px;
+    width:100%;
+
+  }
+
+
+  footer img {
+    float: left;
+    background-color: none;
+    margin-left: 1.5%;
+    margin-top: 5%;
+    display: none;
+  }
+
+  footer .contactos {
+  width: 25%;
+  background-color: none;
+  vertical-align: center;
+  position: absolute;
+  padding-left: 14%;
+  padding-bottom: 5%;
+  color: white;
+  text-align: center;
+
+  }
+
+  footer .contactos #email{
+  margin-bottom: 0;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  margin-top: 1%;
+  font-size: 13px;
+  }
+
+  footer .contactos #tlmvl{
+  padding-top: 4%;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  font-size: 13px;
+  }
+
+
+  footer .footer_text{
+      color: white;
+      bottom: 0;
+      margin-left:20%;
+
+
+  }
+
+  section.sec2{
+    width: 100%;
+    height: 350%;
+    background: black;
+    margin: 0;
+    top: 8%;
+    display: block;
+  }
+
+
+
+}
+
+
+
+@media screen and (min-width: 776px) {
+
+  .about{
+    padding-left: 1%;
+    margin-top: 10%;
+    width: 100%;
+    height: 600px;
+    background-color: white;
+  }
+
+
+  .about p{
+
+    padding-top: 10%;
+    width: 95%;
+    text-align: center;
+    font-size: 17px;
+    vertical-align: center;
+    padding-left: 10%;
+  }
+
+  .left{
+    width: 40%;
+    float: left;
+  }
+
+  .sig {
+    padding-left: 45%;
+
+  }
+
+  .about h1{
+    text-align: center;
+    padding-top: 0px;
+    font-size: 24px;
+    padding-left: 11%;
+  }
+
+  .about .foto{
+  float: right;
+  width: 50%;
+  object-fit: fill;
+  height: 100%;
+
+  }
+
+  .under_img{
+
+    display: none;
+
+  }
+
+  .sig{
+    display: none;
+
+  }
+
+
+  .footer_box {
+
+    width: 100%
+    bottom: 0;
+    height: 30%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: darkgrey;
+    position: relative;
+    clear: both;
+  }
+
+  footer{
+
+      position: absolute;
+      width: 100%;
+
+
+  }
+
+
+  footer h1{
+    font-size: 24px;
+  }
+
+
+  footer p{
+    font-size: 13px;
+    bottom: 0;
+
+  }
+
+
+  footer img {
+    float: left;
+    background-color: none;
+    margin-left: 1.5%;
+    margin-top: 5%;
+    display: none;
+  }
+
+  footer .contactos {
+  width: 25%;
+  background-color: none;
+  vertical-align: center;
+  position: absolute;
+  padding-left: 14%;
+  padding-bottom: 5%;
+  color: white;
+  text-align: center;
+
+  }
+
+  footer .contactos #email{
+  margin-bottom: 0;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  margin-top: 1%;
+  font-size: 13px;
+  }
+
+  footer .contactos #tlmvl{
+  padding-top: 4%;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  font-size: 13px;
+  }
+
+  footer .footer_text{
+      color: white;
+      margin-left:25%;
+
+
+  }
+
+  section.sec2{
+    width: 100%;
+    height: 350%;
+    background: black;
+    margin: 0;
+    top: 8%;
+    display: block;
+  }
+
+
+
+}
+
+
+
+
+@media screen and (min-width: 840px ) {
+  footer .footer_text{
+      color: white;
+      
+
+
+  }
+}
+
+
+@media screen and (min-width: 913px ) {
+  footer .footer_text{
+      color: white;
+      
+
+
+  }
+}
+
+@media screen and (min-width: 954px ) {
+  footer .footer_text{
+      color: white;
+      margin-top: 20%;
+
+
+  }
+  
+  
+  
+}
+
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  .about{
+    padding-left: 1%;
+    margin-top: 10%;
+    width: 100%;
+    height: 600px;
+    background-color: white;
+  }
+  .about p{
+
+    padding-top: 5%;
+    width: 95%;
+    text-align: center;
+    font-size: 20px;
+    vertical-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .left{
+    width: 50%;
+    float: left;
+  }
+
+  .sig {
+    padding-left: 45%;
+
+  }
+
+  .about h1{
+    text-align: center;
+    padding-top: 0px;
+    font-size: 30px;
+  }
+
+  .about .foto{
+  float: right;
+  width: 50%;
+  object-fit: fill;
+  height: 100%;
+
+  }
+  .under_img{
+
+    display: none;
+
+  }
+
+  .sig{
+    display: none;
+
+  }
+
+
+  .footer_box {
+
+    width: 100%
+    bottom: 0;
+    height: 30%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: darkgrey;
+    position: relative;
+    clear: both;
+  }
+
+  footer{
+
+      position: absolute;
+      width: 100%;
+
+
+  }
+
+  footer p{
+    font-size: 13px;
+
+  }
+
+
+  footer img {
+    float: left;
+    background-color: none;
+    margin-left: 1.5%;
+    margin-top: 5%;
+    display: block;
+
+  }
+
+  footer .contactos {
+  width: 25%;
+  background-color: none;
+  vertical-align: center;
+  position: absolute;
+  padding-left: 14%;
+  padding-bottom: 5%;
+  color: white;
+  text-align: center;
+
+  }
+
+  footer .contactos #email{
+  margin-bottom: 0;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  margin-top: 1%;
+  font-size: 13px;
+  }
+
+  footer .contactos #tlmvl{
+  padding-top: 4%;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  font-size: 13px;
+  }
+
+  footer .footer_text{
+      color: white;
+      margin-top: 19%;
+
+
+  }
+
+  section.sec2{
+  	width: 100%;
+    height: 350%;
+  	background: black;
+    margin: 0;
+    top: 8%;
+    display: block;
+  }
+
+
+
+}
+
+
+
+
+@media screen and (min-width: 1007px) {
+
+  .footer_box {
+
+    width: 100%
+    bottom: 0;
+    height: 35%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: darkgrey;
+    position: relative;
+    clear: both;
+  }
+
+  footer{
+
+      position: absolute;
+      width: 100%;
+
+
+  }
+
+  footer p{
+    font-size: 13px;
+
+  }
+
+
+  footer img {
+    float: left;
+    background-color: none;
+    margin-left: 1.5%;
+    margin-top: 5%;
+
+  }
+
+  footer .contactos {
+  width: 25%;
+  background-color: none;
+  vertical-align: center;
+  position: absolute;
+  padding-left: 14%;
+  padding-bottom: 5%;
+  color: white;
+  text-align: center;
+
+  }
+
+  footer .contactos #email{
+  margin-bottom: 0;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  margin-top: 1%;
+  font-size: 13px;
+  }
+
+  footer .contactos #tlmvl{
+  padding-top: 4%;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  font-size: 13px;
+  }
+
+
+
+  footer .footer_text{
+      color: white;
+      margin-top: 23%;
+
+  }
+
+
+  .menu figure {
+  max-height: 350px;
+  overflow: hidden;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  position: relative;
+  }
+
+
+
+  .breweries > ul > li > figure > img {
+    width: 100%;
+    object-fit: fill;
+    text-align: center;
+  }
+
+  .breweries > ul > li > figure > figcaption {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+    height: 20%;
+  }
+
+  .breweries > ul > li > figure > figcaption > h3 {
+    color: white;
+    padding: .5rem;
+    font-size: 1.25rem;
+  }
+
+  .breweries > ul > li > p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1rem .75rem;
+    color: white;
+  }
+
+  .breweries > ul > li > a {
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+  }
+
+.menu_box{
+  width: 150%;
+  margin-left: 78%;
+
+
+}
+
+}
+
+
+
+@media screen and (min-width: 1110px ) {
+  footer .footer_text{
+      color: white;
+      margin-top: 22%;
+
+
+  }
+}
+
+@media screen and (min-width: 1152px ) {
+  footer .footer_text{
+      color: white;
+      margin-top: 20%;
+
+
+  }
+}
+
+@media screen and (min-width: 1260px ) {
+  footer .footer_text{
+      color: white;
+      margin-top: 19%;
+
+
+  }
+}
+
+@media screen and (min-width: 1330px ) {
+  footer .footer_text{
+      color: white;
+      margin-top: 18%;
+
+
+  }
+}
+
+
+
+
+
+@media screen and (min-width: 1346px) {
+
+  .footer_box {
+
+    width: 100%
+    bottom: 0;
+    height: 35%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: darkgrey;
+    position: relative;
+    clear: both;
+  }
+
+  footer{
+
+      position: absolute;
+      width: 100%;
+
+
+  }
+
+  footer p{
+    font-size: 13px;
+
+  }
+
+
+  footer img {
+    float: left;
+    background-color: none;
+    margin-left: 1.5%;
+    margin-top: 5%;
+
+  }
+
+  footer .contactos {
+  width: 25%;
+  background-color: none;
+  vertical-align: center;
+  position: absolute;
+  padding-left: 14%;
+  padding-bottom: 5%;
+  color: white;
+  text-align: center;
+
+  }
+
+  footer .contactos #email{
+  margin-bottom: 0;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  margin-top: 1%;
+  font-size: 13px;
+  }
+
+  footer .contactos #tlmvl{
+  padding-top: 4%;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  font-size: 13px;
+  }
+
+  footer .footer_text{
+      color: white;
+      padding-top:0%;
+      margin-right:5%;
+
+  }
+
+
+  .menu figure {
+  max-height: 350px;
+  overflow: hidden;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  position: relative;
+  }
+
+
+
+  .breweries > ul > li > figure > img {
+    width: 100%;
+    object-fit: fill;
+    text-align: center;
+  }
+
+  .breweries > ul > li > figure > figcaption {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+    height: 20%;
+  }
+
+  .breweries > ul > li > figure > figcaption > h3 {
+    color: white;
+    padding: .5rem;
+    font-size: 1.25rem;
+  }
+
+  .breweries > ul > li > p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1rem .75rem;
+    color: white;
+  }
+
+  .breweries > ul > li > a {
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+  }
+
+.menu_box{
+  width: 100%;
+  margin-left: 0;
+}
+
+
+@media screen and (min-width: 1369px) {
+
+  .footer_box {
+
+    width: 100%
+    bottom: 0;
+    height: 35%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: darkgrey;
+    position: relative;
+    clear: both;
+  }
+
+  footer{
+
+      position: absolute;
+      width: 100%;
+
+
+  }
+
+  footer p{
+    font-size: 13px;
+
+  }
+
+
+  footer img {
+    float: left;
+    background-color: none;
+    margin-left: 1.5%;
+    margin-top: 5%;
+
+  }
+
+  footer .contactos {
+  width: 25%;
+  background-color: none;
+  vertical-align: center;
+  position: absolute;
+  padding-left: 14%;
+  padding-bottom: 5%;
+  color: white;
+  text-align: center;
+
+  }
+
+  footer .contactos #email{
+  margin-bottom: 0;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  margin-top: 1%;
+  font-size: 13px;
+  }
+
+  footer .contactos #tlmvl{
+  padding-top: 4%;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  font-size: 13px;
+  }
+
+
+  footer .footer_text{
+      color: white;
+      padding-top:0%;
+      margin-right: 0%;
+
+  }
+
+
+  .menu figure {
+  max-height: 350px;
+  overflow: hidden;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  position: relative;
+  }
+
+
+
+  .breweries > ul > li > figure > img {
+    width: 100%;
+    object-fit: fill;
+    text-align: center;
+  }
+
+  .breweries > ul > li > figure > figcaption {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+    height: 20%;
+  }
+
+  .breweries > ul > li > figure > figcaption > h3 {
+    color: white;
+    padding: .5rem;
+    font-size: 1.25rem;
+  }
+
+  .breweries > ul > li > p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1rem .75rem;
+    color: white;
+  }
+
+  .breweries > ul > li > a {
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1400px) {
+
+  .menu_box{
+    width: 100%;
+
+
+  }
+
+  .about{
+    padding-left: 1%;
+    margin-top: 10%;
+    width: 100%;
+    height: 1000px;
+    background-color: white;
+  }
+  .about p{
+
+    padding-top: 5%;
+    width: 95%;
+    text-align: center;
+    font-size: 20px;
+    vertical-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .left{
+    width: 50%;
+    float: left;
+  }
+
+  .sig {
+    padding-left: 45%;
+
+  }
+
+  .about h1{
+    text-align: center;
+    padding-top: 0px;
+    font-size: 30px;
+  }
+
+  .about .foto{
+  float: right;
+  width: 50%;
+  object-fit: fill;
+  height: 100%;
+
+  }
+  .under_img{
+    display: block;
+    width: 30%;
+
+  }
+
+  .sig{
+  display: block;
+  padding-top: 10%;
+  }
+
+
+  .footer_box {
+
+    width: 100%
+    bottom: 0;
+    height: 35%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: darkgrey;
+    position: relative;
+    clear: both;
+  }
+
+  footer{
+
+      position: absolute;
+      width: 100%;
+
+
+  }
+
+  footer p{
+    font-size: 13px;
+
+  }
+
+
+  footer img {
+    float: left;
+    background-color: none;
+    margin-left: 1.5%;
+    margin-top: 5%;
+
+  }
+
+  footer .contactos {
+  width: 25%;
+  background-color: none;
+  vertical-align: center;
+  position: absolute;
+  padding-left: 14%;
+  padding-bottom: 5%;
+  color: white;
+  text-align: center;
+
+  }
+
+  footer .contactos #email{
+  margin-bottom: 0;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  margin-top: 1%;
+  font-size: 13px;
+  }
+
+  footer .contactos #tlmvl{
+  padding-top: 4%;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  font-size: 13px;
+  }
+
+
+  footer .footer_text{
+      color: white;
+      padding-top: 0;
+      bottom: 2%;
+      margin-left: 0;
+
+
+  }
+
+.menu figure {
+max-height: 350px;
+overflow: hidden;
+border-top-left-radius: .5rem;
+border-top-right-radius: .5rem;
+position: relative;
+}
+
+
+
+.breweries > ul > li > figure > img {
+  width: 100%;
+  object-fit: fill;
+  text-align: center;
+}
+
+.breweries > ul > li > figure > figcaption {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0,0,0,.7);
+  width: 100%;
+  height: 20%;
+}
+
+.breweries > ul > li > figure > figcaption > h3 {
+  color: white;
+  padding: .5rem;
+  font-size: 1.25rem;
+}
+
+.breweries > ul > li > p {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1rem .75rem;
+  color: white;
+}
+
+.breweries > ul > li > a {
+
+  padding: .5rem 1rem;
+
+  margin-top: 1rem;
+
+}
+
+
+}
+
+
+@media screen and (min-width: 1403px ) {
+  .breweries {
+   left:-1%;
+   
+   padding-right:0;
+   
+  }
+  
+  footer .footer_text{
+    color: white;
+
+    margin-top: 17%;
+    margin-left: 0;
+
+
+  }
+}
+
+@media screen and (min-width: 1485px ) {
+  .breweries {
+   left:-1%;
+   
+   padding-right:0;
+   
+  }
+  
+  
+  footer .footer_text{
+    color: white;
+    margin-top: 15%;
+    margin-left:30%;
+    
+
+
+  }
+}
+
+@media screen and (min-width: 1920px){
+    
+    #tres{
+  padding: .5rem 1rem;
+
+  margin-top: 5.5rem;
+
+}
+    
+    
+    
+  .footer_box {
+
+    width: 100%
+    bottom: 0;
+    height: 28%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: darkgrey;
+    position: relative;
+    clear: both;
+  }
+
+  footer{
+
+      position: absolute;
+      width: 100%;
+
+
+  }
+
+  footer p{
+    font-size: 13px;
+
+  }
+
+
+  footer img {
+    float: left;
+    background-color: none;
+    margin-left: 1.5%;
+    margin-top: 5%;
+
+  }
+
+  footer .contactos {
+  width: 25%;
+  background-color: none;
+  vertical-align: center;
+  position: absolute;
+  padding-left: 14%;
+  padding-bottom: 5%;
+  color: white;
+  text-align: center;
+
+  }
+
+  footer .contactos #email{
+  margin-bottom: 0;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  margin-top: 1%;
+  font-size: 13px;
+  }
+
+  footer .contactos #tlmvl{
+  padding-top: 4%;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  font-size: 13px;
+  }
+
+
+    footer .footer_text{
+    color: white;
+    padding-top: 0;
+    margin-top: 10%;
+    margin-left: 36%;
+
+
+}
+
+
+
+section.sec2{
+  width: 100%;
+  height: 288%;
+  background: black;
+  margin: 0;
+  top: 8%;
+  display: block;
+}
+
+
+
+ .about{
+    padding-left: 1%;
+    margin-top: 10%;
+    width: 100%;
+    height: 600px;
+    background-color: white;
+  }
+
+    
+    
+}
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (min-width: 2000px) {
+  .breweries {
+    padding-top:10%;
+    left:-1%;
+  }
+
+
+
+  .menu_box{
+    width: 100%;
+
+
+  }
+
+  .about{
+    padding-left: 1%;
+    margin-top: 10%;
+    width: 100%;
+    height: 700px;
+    background-color: white;
+  }
+  .about p{
+
+    padding-top: 5%;
+    width: 95%;
+    text-align: center;
+    font-size: 20px;
+    vertical-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .left{
+    width: 50%;
+    float: left;
+  }
+
+  .sig {
+    padding-left: 45%;
+
+  }
+
+  .about h1{
+    text-align: center;
+    padding-top: 0px;
+    font-size: 30px;
+  }
+
+  .about .foto{
+  float: right;
+  width: 50%;
+  object-fit: fill;
+  height: 100%;
+
+  }
+  .under_img{
+    display: block;
+    width: 30%;
+
+  }
+
+  .sig{
+  display: block;
+  padding-top: 10%;
+  }
+
+
+  .footer_box {
+
+    width: 100%
+    bottom: 0;
+    height: 22%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: darkgrey;
+    position: relative;
+    clear: both;
+  }
+
+  footer{
+
+      position: absolute;
+      width: 100%;
+
+
+  }
+
+  footer p{
+    font-size: 13px;
+
+  }
+
+
+  footer img {
+    float: left;
+    background-color: none;
+    margin-left: 1.5%;
+    margin-top: 5%;
+
+  }
+
+  footer .contactos {
+  width: 25%;
+  background-color: none;
+  vertical-align: center;
+  position: absolute;
+  padding-left: 14%;
+  padding-bottom: 5%;
+  color: white;
+  text-align: center;
+
+  }
+
+  footer .contactos #email{
+  margin-bottom: 0;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  margin-top: 1%;
+  font-size: 13px;
+  }
+
+  footer .contactos #tlmvl{
+  padding-top: 4%;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  font-size: 13px;
+  }
+
+
+  footer .footer_text{
+      color: white;
+      padding-top: 0;
+      margin-top: 7%;
+      margin-left: 36%;
+
+
+  }
+
+.menu figure {
+max-height: 350px;
+overflow: hidden;
+border-top-left-radius: .5rem;
+border-top-right-radius: .5rem;
+position: relative;
+}
+
+
+
+.breweries > ul > li > figure > img {
+  width: 100%;
+  object-fit: fill;
+  text-align: center;
+}
+
+.breweries > ul > li > figure > figcaption {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0,0,0,.7);
+  width: 100%;
+  height: 20%;
+}
+
+.breweries > ul > li > figure > figcaption > h3 {
+  color: white;
+  padding: .5rem;
+  font-size: 1.25rem;
+}
+
+.breweries > ul > li > p {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1rem .75rem;
+  color: white;
+}
+
+.breweries > ul > li > a {
+
+  padding: .5rem 1rem;
+
+  margin-top: 1rem;
+
+}
+
+section.sec2{
+  width: 100%;
+  height: 200%;
+  background: black;
+  margin: 0;
+  top: 8%;
+  display: block;
+}
+
+
+
+footer .footer_text{
+    color: white;
+    padding-top: 0;
+    margin-top: 7%;
+    margin-left: 36%;
+
+
+}
